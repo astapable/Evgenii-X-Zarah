@@ -1,0 +1,8 @@
+html {
+    :root {
+	--spacing: 1rem;
+
+	font-family: 'Helvetica', sans-serif;
+	font-size: 125%;
+}
+}
