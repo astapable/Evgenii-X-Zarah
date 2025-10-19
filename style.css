@@ -38,6 +38,10 @@
     scroll-behavior: smooth;
 }
 
+/* VARIABLES */
+
+
+/* WRAPPER TYPES */
 body {
     font-size: 1.5rem; /* 24px */
     font-style: normal;
@@ -45,3 +49,50 @@ body {
     line-height: 140%; 
     letter-spacing: -0.28px;
 }
+
+article {
+
+}
+
+section {
+
+}
+
+div {
+
+}
+
+aside {
+
+}
+
+/* CONTENT TYPES */
+h1 {
+
+}
+
+h2 {
+
+}
+
+blockquote {
+
+}
+
+p {
+
+}
+
+span {
+
+}
+
+a:link {  
+
+}
+
+a:hover {
+
+}
+
+
