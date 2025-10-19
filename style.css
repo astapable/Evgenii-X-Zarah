@@ -34,12 +34,25 @@
 :root {
 	--spacing: 1rem;
 	font-family: 'Geist', sans-serif;
+    font-weight: 300;
 	font-size: 125%;
     scroll-behavior: smooth;
+    
+    /* neutral base */
+    --off-white: #FAFAFA; 
+    --charcoal: #2d2d2d;
+    --neutral-grey: #898989;
+
+    /* main accent colors */
+    --light-blue: #009FF0; 
+    --rich-pink: #D8007B;
+    --sun-yellow: #FFF100;
+    
+    /* additional color */
+    --green: #18AD47; 
+    --red: #FF0000;
+    --orange: #FF8800;
 }
-
-/* VARIABLES */
-
 
 /* WRAPPER TYPES */
 body {
@@ -48,51 +61,103 @@ body {
     font-weight: 300;
     line-height: 140%; 
     letter-spacing: -0.28px;
+    color: var(--off-white);
 }
 
 article {
-
+    display: flex;
+    flex-direction: column;
 }
 
 section {
-
+    display: flex;
+    flex-direction: column;
 }
 
-div {
-
+div.duo {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
 }
 
-aside {
+/* DONE */ div.citation {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
 
+/* DONE */ div.citation blockquote:nth-child(1) { color: var(--light-blue); }
+
+/* DONE */ div.citation blockquote:nth-child(2) { 
+    margin-block-start: -18rem;
+    color: var(--rich-pink); 
+}
+
+/* DONE */ div.citation blockquote:nth-child(3) { 
+    margin-block-start: -18rem;
+    color: var(--sun-yellow); 
+}
+
+div.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+
+aside.vertical {
+    text-align: right;
+    font-weight: 400;
+    color: var(--neutral-grey);
+    text-transform: uppercase;
 }
 
 /* CONTENT TYPES */
 h1 {
+    font-weight: 700;
+    font-size: 12.5rem;
+    line-height: 100%;
+    mix-blend-mode: multiply;
+    color: var(--charcoal);
+}
 
+p.copycat {
+    font-weight: 700;
+    font-size: 12.5rem;
+    line-height: 100%;
+    mix-blend-mode: multiply; 
 }
 
 h2 {
-
+    text-align: right;
+    font-weight: 400;
+    color: var(--neutral-grey);
+    text-transform: uppercase;
+     /* same as aside */
 }
 
-blockquote {
-
+/* DONE */ blockquote {
+    font-weight: 700;
+    font-size: 4.6rem;
+    line-height: 100%;
+    mix-blend-mode: multiply;
 }
 
 p {
-
+    font-weight: 300;
+    color: var(--charcoal);
 }
 
 span {
-
+    color: var(--charcoal);
 }
 
 a:link {  
-
+    color: var(--charcoal);
 }
 
 a:hover {
-
+    color: var(--charcoal);
 }
 
 
