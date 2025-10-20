@@ -126,17 +126,24 @@ div.duo {
     margin-block-start: -22.7rem;
 }
 
+.citation blockquote.line-4:not(:first-child) {
+    margin-block-start: -8.9rem;
+}
+
 .citation blockquote:nth-child(1),
 .citation .line-2:nth-child(1)
-.citation .line-3:nth-child(1) { color: var(--light-blue); }
+.citation .line-3:nth-child(1) 
+.citation .line-4:nth-child(1) { color: var(--light-blue); }
 
 .citation blockquote:nth-child(2),
 .citation .line-2:nth-child(2)
-.citation .line-3:nth-child(2) { color: var(--rich-pink); }
+.citation .line-3:nth-child(2) 
+.citation .line-4:nth-child(2) { color: var(--rich-pink); }
 
 .citation blockquote:nth-child(3),
 .citation .line-2:nth-child(3)
-.citation .line-3:nth-child(3) { color: var(--sun-yellow); }
+.citation .line-3:nth-child(3) 
+.citation .line-4:nth-child(3) { color: var(--sun-yellow); }
 /* DONE */
 
 aside.vertical {
