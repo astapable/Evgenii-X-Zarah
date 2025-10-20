@@ -31,6 +31,10 @@
     font-display: swap;
 }
 
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 :root {
 	--spacing: 1rem;
 	font-family: 'Geist', sans-serif;
@@ -80,6 +84,58 @@ div.duo {
     align-items: flex-start;
 }
 
+/* DONE */ div.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    inline-size: 70%;
+}
+
+/* DONE */ div.hero span.h1:nth-child(1) { 
+    mix-blend-mode: multiply;
+    color: var(--charcoal); 
+}
+
+/* DONE */ div.hero span.h1:nth-child(2) { 
+    mix-blend-mode: multiply;
+    color: var(--rich-pink); 
+}
+
+/* DONE */ div.hero span.h1:nth-child(3) { 
+    mix-blend-mode: multiply;
+    color: var(--sun-yellow); 
+}
+
+/* DONE */ div.hero span.h1:nth-child(4) { 
+    mix-blend-mode: multiply;
+    color: var(--light-blue); 
+}
+
+/* DONE */ div.hero span.h1:nth-child(5) { 
+    mix-blend-mode: multiply;
+    color: var(--charcoal); 
+}
+
+/* DONE */ div.hero span.h1:nth-child(6) { 
+    mix-blend-mode: multiply;
+    color: var(--sun-yellow); 
+}
+
+/* DONE */ div.hero span.h1:nth-child(7) { 
+    mix-blend-mode: multiply;
+    color: var(--light-blue); 
+}
+
+/* DONE */ div.hero span.h1:nth-child(8) { 
+    mix-blend-mode: multiply;
+    color: var(--rich-pink); 
+}
+
+/* DONE */ div.hero span.h1:nth-child(9) { 
+    mix-blend-mode: multiply;
+    color: var(--charcoal); 
+}
+
 /* DONE */ div.citation {
     display: flex;
     flex-direction: column;
@@ -98,13 +154,6 @@ div.duo {
     color: var(--sun-yellow); 
 }
 
-div.hero {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-
 aside.vertical {
     text-align: right;
     font-weight: 400;
@@ -113,12 +162,16 @@ aside.vertical {
 }
 
 /* CONTENT TYPES */
-h1 {
+/* DONE */ h1 {
+    display: flex;
+    flex-direction: column;
+    gap: -4.75rem;
     font-weight: 700;
     font-size: 12.5rem;
-    line-height: 100%;
-    mix-blend-mode: multiply;
+    line-height: 32%;
     color: var(--charcoal);
+    margin-block: 1.8rem;
+
 }
 
 p.copycat {
