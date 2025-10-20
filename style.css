@@ -142,17 +142,13 @@ div.duo {
     align-items: flex-start;
 }
 
-/* DONE */ div.citation blockquote:nth-child(1) { color: var(--light-blue); }
-
-/* DONE */ div.citation blockquote:nth-child(2) { 
-    margin-block-start: -18rem;
-    color: var(--rich-pink); 
+/* DONE */div.citation blockquote:not(:first-child) {
+  margin-block-start: -18rem;
 }
 
-/* DONE */ div.citation blockquote:nth-child(3) { 
-    margin-block-start: -18rem;
-    color: var(--sun-yellow); 
-}
+/* DONE */div.citation blockquote:nth-child(1) { color: var(--light-blue); }
+/* DONE */div.citation blockquote:nth-child(2) { color: var(--rich-pink); }
+/* DONE */div.citation blockquote:nth-child(3) { color: var(--sun-yellow); }
 
 aside.vertical {
     text-align: right;
