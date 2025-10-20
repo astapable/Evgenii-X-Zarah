@@ -91,36 +91,53 @@ div.duo {
     inline-size: 70%;
 }
 
-/* DONE */ div.hero span.h1 {
-  mix-blend-mode: multiply;
+/* DONE */
+.hero span.h1 {
+    display: block;
+    mix-blend-mode: multiply;
 }
 
-/* DONE */ div.hero span.h1:nth-child(1),
-/* DONE */ div.hero span.h1:nth-child(5),
-/* DONE */ div.hero span.h1:nth-child(9) { color: var(--charcoal); }
+.hero span.h1:nth-child(1),
+.hero span.h1:nth-child(5),
+.hero span.h1:nth-child(9) { color: var(--charcoal); }
 
-/* DONE */ div.hero span.h1:nth-child(2),
-/* DONE */ div.hero span.h1:nth-child(8) { color: var(--rich-pink); }
+.hero span.h1:nth-child(2),
+.hero span.h1:nth-child(8) { color: var(--rich-pink); }
 
-/* DONE */ div.hero span.h1:nth-child(3),
-/* DONE */ div.hero span.h1:nth-child(6) { color: var(--sun-yellow); }
+.hero span.h1:nth-child(3),
+.hero span.h1:nth-child(6) { color: var(--sun-yellow); }
 
-/* DONE */ div.hero span.h1:nth-child(4),
-/* DONE */ div.hero span.h1:nth-child(7) { color: var(--light-blue); }
+.hero span.h1:nth-child(4),
+.hero span.h1:nth-child(7) { color: var(--light-blue); }
 
-/* DONE */ div.citation {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+.citation {
+    display: block;
 }
 
-/* DONE */div.citation blockquote:not(:first-child) {
-  margin-block-start: -18rem;
+.citation blockquote:not(:first-child) {
+    margin-block-start: -18rem;
 }
 
-/* DONE */div.citation blockquote:nth-child(1) { color: var(--light-blue); }
-/* DONE */div.citation blockquote:nth-child(2) { color: var(--rich-pink); }
-/* DONE */div.citation blockquote:nth-child(3) { color: var(--sun-yellow); }
+.citation blockquote.line-2:not(:first-child) {
+    margin-block-start: -13.5rem;
+}
+
+.citation blockquote.line-3:not(:first-child) {
+    margin-block-start: -22.7rem;
+}
+
+.citation blockquote:nth-child(1),
+.citation .line-2:nth-child(1)
+.citation .line-3:nth-child(1) { color: var(--light-blue); }
+
+.citation blockquote:nth-child(2),
+.citation .line-2:nth-child(2)
+.citation .line-3:nth-child(2) { color: var(--rich-pink); }
+
+.citation blockquote:nth-child(3),
+.citation .line-2:nth-child(3)
+.citation .line-3:nth-child(3) { color: var(--sun-yellow); }
+/* DONE */
 
 aside.vertical {
     text-align: right;
