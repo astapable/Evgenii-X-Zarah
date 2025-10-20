@@ -139,14 +139,6 @@ aside.vertical {
     line-height: 32%;
     color: var(--charcoal);
     margin-block: 1.8rem;
-
-}
-
-p.copycat {
-    font-weight: 700;
-    font-size: 12.5rem;
-    line-height: 100%;
-    mix-blend-mode: multiply; 
 }
 
 h2 {
