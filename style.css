@@ -60,12 +60,18 @@
 
 /* WRAPPER TYPES */
 body {
-    font-size: 1.5rem; /* 24px */
+    font-size: 0.875rem; /* 14px */
     font-style: normal;
     font-weight: 300;
     line-height: 140%; 
-    letter-spacing: -0.28px;
+    letter-spacing: 0rem;
     color: var(--off-white);
+    padding-inline: 1.25rem;
+
+    @media (width > 600px) {
+		font-size: 1.5rem; /* 24px */
+        letter-spacing: -0.018rem;
+	}
 }
 
 article {
@@ -82,6 +88,7 @@ div.duo {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
+    gap: 2rem;
 }
 
 /* DONE */ div.hero {
@@ -114,21 +121,10 @@ div.duo {
     display: block;
 }
 
-.citation blockquote:not(:first-child) {
-    margin-block-start: -18rem;
-}
-
-.citation blockquote.line-2:not(:first-child) {
-    margin-block-start: -13.5rem;
-}
-
-.citation blockquote.line-3:not(:first-child) {
-    margin-block-start: -22.7rem;
-}
-
-.citation blockquote.line-4:not(:first-child) {
-    margin-block-start: -8.9rem;
-}
+.citation blockquote:not(:first-child) { margin-block-start: -18rem; }
+.citation blockquote.line-2:not(:first-child) {  margin-block-start: -13.5rem; }
+.citation blockquote.line-3:not(:first-child) { margin-block-start: -22.7rem; }
+.citation blockquote.line-4:not(:first-child) { margin-block-start: -8.9rem; }
 
 .citation blockquote:nth-child(1),
 .citation .line-2:nth-child(1)
@@ -147,10 +143,18 @@ div.duo {
 /* DONE */
 
 aside.vertical {
+    font-size: 0.75rem; /* 12px */
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    transform-origin: center;
     text-align: right;
     font-weight: 400;
     color: var(--neutral-grey);
     text-transform: uppercase;
+
+    @media (width > 600px) {
+        font-size: 1.25rem; /* 20px */
+    }
 }
 
 /* CONTENT TYPES */
@@ -171,6 +175,21 @@ h2 {
     color: var(--neutral-grey);
     text-transform: uppercase;
      /* same as aside */
+}
+
+h3 {
+    font-size: 1.5rem; /* 24px */
+    font-weight: 400;
+    line-height: 115%;
+    letter-spacing: 0rem;
+    text-transform: uppercase;
+    color: var(--charcoal);
+
+    @media (width > 600px) {
+        font-size: 4.15rem; /* 66px */
+        line-height: 100%;
+        letter-spacing: -0.083rem;
+    }
 }
 
 /* DONE */ blockquote {
