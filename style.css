@@ -229,12 +229,42 @@ span {
     color: var(--charcoal);
 }
 
-a:link {  
+a:link,
+a:visited {      
     color: var(--charcoal);
+    text-decoration: underline;
+    text-decoration-color: var(--sun-yellow);
+    text-decoration-thickness: 0.375rem;
+    text-underline-offset: -0.12rem;
+    text-decoration-skip-ink: none;
+}
+
+@media (width > 600px) {
+    a:link,
+    a:visited { 
+    text-decoration-thickness: 0.625rem;
+    text-underline-offset: -0.25rem;
+    }
 }
 
 a:hover {
     color: var(--charcoal);
+    text-decoration: underline;
+    text-decoration-color: var(--sun-yellow);
+    text-decoration-thickness: 0.375rem;
+    text-underline-offset: -0.12rem;
+    text-decoration-skip-ink: none;
+}
+
+@media (width > 600px) {
+    a:hover {
+        color: var(--off-white);
+        text-decoration: underline;
+        text-decoration-color: var(--rich-pink);
+        text-decoration-thickness: 1.8rem;
+        text-underline-offset: -1.4rem;
+        text-decoration-skip-ink: none;
+    }
 }
 
 
