@@ -83,11 +83,13 @@ body {
 article {
     display: flex;
     flex-direction: column;
+    gap: 4rem;
 }
 
 section {
     display: flex;
     flex-direction: column;
+    gap: 2rem;
 }
 
 div.duo {
