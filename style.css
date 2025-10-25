@@ -72,6 +72,7 @@ body {
     letter-spacing: 0rem;
     color: var(--off-white);
     padding-inline: 0.875rem; /* 20px */
+    gap: 6rem;
 
     @media (width > 600px) {
 		font-size: 1.5rem; /* 24px */
@@ -80,10 +81,16 @@ body {
 	}
 }
 
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
 article {
     display: flex;
     flex-direction: column;
-    gap: 5rem;
+    gap: 4rem;
 }
 
 section {
