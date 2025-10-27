@@ -80,7 +80,7 @@ body {
 	}
 }
 
-/* !!!!!!!!!NEW */ main {
+main {
     display: flex;
     align-items: flex-start;
     flex-direction: column;
@@ -91,7 +91,7 @@ body {
     }
 }
 
-/* !!!!!!!!!NEW */ article {
+article {
     display: flex;
     align-items: flex-start;
     flex-direction: column;
@@ -102,7 +102,7 @@ body {
     }
 }
 
-/* !!!!!!!!!NEW */ section { 
+section { 
     display: flex;
     align-items: flex-start;
     flex-direction: column;
@@ -125,7 +125,7 @@ body {
 }
 
 
-/* !!!!!!!!!NEW */ div.duo {
+div.duo {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -166,7 +166,7 @@ div.hero {
 .hero span.h1:nth-child(4),
 .hero span.h1:nth-child(7) { color: var(--light-blue); }
 
-/* !!!!!!!!!NEW */ .float {
+.float {
     font-size: 5.25rem;
     line-height: 90%;
     letter-spacing: -0.25rem;
@@ -184,7 +184,7 @@ div.hero {
     }
 }
 
-/* !!!!!!!!!NEW */ .citation {
+.citation {
     display: block;
     inline-size: 100%;
     order: 1;
@@ -196,34 +196,7 @@ div.hero {
     }
 }
 
-/* .citation blockquote:not(:first-child) { margin-block-start: -12.75rem; }
-.citation blockquote.line-2:not(:first-child) { margin-block-start: -13.5rem; }
-.citation blockquote.line-3:not(:first-child) { margin-block-start: -22.7rem; }
-.citation blockquote.line-4:not(:first-child) { margin-block-start: -8.9rem; }
-
-    @media (width > 600px) {
-        .citation blockquote:not(:first-child) { margin-block-start: -18rem; }
-        .citation blockquote.line-2:not(:first-child) { margin-block-start: -13.5rem; }
-        .citation blockquote.line-3:not(:first-child) { margin-block-start: -22.7rem; }
-        .citation blockquote.line-4:not(:first-child) { margin-block-start: -8.9rem; }
-    }
-
-.citation blockquote:nth-child(1),
-.citation .line-2:nth-child(1)
-.citation .line-3:nth-child(1) 
-.citation .line-4:nth-child(1) { color: var(--light-blue); }
-
-.citation blockquote:nth-child(2),
-.citation .line-2:nth-child(2)
-.citation .line-3:nth-child(2) 
-.citation .line-4:nth-child(2) { color: var(--rich-pink); }
-
-.citation blockquote:nth-child(3),
-.citation .line-2:nth-child(3)
-.citation .line-3:nth-child(3) 
-.citation .line-4:nth-child(3) { color: var(--sun-yellow); } */
-
-/* !!!!!!!!!NEW */ aside.vertical{
+aside.vertical{
     font-size: 0.75rem; /* 12px */
     align-self: stretch;
     text-align: right;
@@ -282,6 +255,7 @@ blockquote {
     line-height: 110%;
     mix-blend-mode: multiply;
     letter-spacing: -0.023rem;
+    color: var(--light-blue);
 
     @media (width > 600px) {
         font-size: 4.6rem; /* 74px */
@@ -290,7 +264,54 @@ blockquote {
     }
 }
 
-/* !!!!!!!!!NEW */ p {
+blockquote::before { 
+    content: '“';
+    
+}
+
+blockquote::after{ 
+    content: '”';
+    }
+
+@media (width > 600px) {
+    blockquote::before { 
+    content: '“';
+    margin-inline-start: -0.5em;
+    }
+
+    blockquote::after{ 
+    content: '”';
+    }
+}
+
+
+
+.lvl-01,
+.lvl-02 {
+    position: absolute;
+}
+
+.lvl-01 {
+    margin-block-start: 0.12rem;
+    color: var(--rich-pink);
+
+    @media (width > 600px) {
+        margin-block-start: 0.35rem;
+        color: var(--rich-pink);
+    }
+}
+
+.lvl-02 {
+    margin-block-start: 0.24rem;
+    color: var(--sun-yellow);
+
+    @media (width > 600px) {
+        margin-block-start: 0.7rem;
+        color: var(--sun-yellow);
+    }
+}
+
+p {
     font-size: 0.875rem; /* 14px */
     font-style: normal;
     font-weight: 00;
@@ -305,24 +326,24 @@ blockquote {
 	}
 }
 
-span {
-    color: var(--charcoal);
-}
-
 .intro {
     color: var(--neutral-grey);
     font-size: 1.25rem; /* 20px */
     font-style: normal;
     font-weight: 400;
-    line-height: 140%; 
+    line-height: 120%; 
     letter-spacing: 0rem;
 
     @media (width > 600px) {
         font-size: 2.5rem; /* 40px */
         font-weight: 400;
-        line-height: 130%; 
+        line-height: 120%; 
         letter-spacing: -0.065rem;
     }
+}
+
+span {
+    color: var(--charcoal);
 }
 
 a {      
