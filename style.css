@@ -160,7 +160,7 @@ div.hero {
     line-height: 90%;
     letter-spacing: -0.25rem;
     font-weight: 700;
-    color: var(--charcoal);
+    color: rgba(18, 18, 18, 0.8) ;
     opacity: 80%;
     text-shadow: 0 24px 0 rgba(45, 45, 45, 0.50), 0 58px 0 rgba(45, 45, 45, 0.30), 0 82px 0 rgba(45, 45, 45, 0.10), 0 16px 0 rgba(45, 45, 45, 0.05);
     mix-blend-mode: multiply;
