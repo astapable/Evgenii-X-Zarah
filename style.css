@@ -188,6 +188,7 @@ div.hero {
     display: block;
     inline-size: 100%;
     order: 1;
+    position: relative;
 
     @media (width > 600px) {
         inline-size: 80%;
@@ -196,9 +197,9 @@ div.hero {
 }
 
 /* .citation blockquote:not(:first-child) { margin-block-start: -12.75rem; }
-/* .citation blockquote.line-2:not(:first-child) { margin-block-start: -13.5rem; }
-/* .citation blockquote.line-3:not(:first-child) { margin-block-start: -22.7rem; }
-/* .citation blockquote.line-4:not(:first-child) { margin-block-start: -8.9rem; }
+.citation blockquote.line-2:not(:first-child) { margin-block-start: -13.5rem; }
+.citation blockquote.line-3:not(:first-child) { margin-block-start: -22.7rem; }
+.citation blockquote.line-4:not(:first-child) { margin-block-start: -8.9rem; }
 
     @media (width > 600px) {
         .citation blockquote:not(:first-child) { margin-block-start: -18rem; }
