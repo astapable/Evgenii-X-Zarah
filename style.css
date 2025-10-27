@@ -161,17 +161,14 @@ div.hero {
     font-weight: 700;
     color: var(--charcoal);
     opacity: 80%;
+    text-shadow: 0 24px 0 rgba(45, 45, 45, 0.50), 0 58px 0 rgba(45, 45, 45, 0.30), 0 82px 0 rgba(45, 45, 45, 0.10), 0 16px 0 rgba(45, 45, 45, 0.05);
+    mix-blend-mode: multiply;
 
     @media (width > 600px) {
-        float: inline-end;
-	    margin-inline-end: initial;
-	    margin-inline-start: 0.5rem;
         font-size: 9rem;
         line-height: 90%;
         letter-spacing: -0.55rem;
-        font-weight: 700;
-        color: var(--charcoal);
-        opacity: 80%;
+        text-shadow: 0 44px 0 rgba(45, 45, 45, 0.50), 0 88px 0 rgba(45, 45, 45, 0.30), 0 126px 0 rgba(45, 45, 45, 0.10), 0 136px 0 rgba(45, 45, 45, 0.05);
     }
 }
 
