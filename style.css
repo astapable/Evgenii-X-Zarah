@@ -178,9 +178,11 @@ div.hero {
 /* !!!!!!!!!NEW */ .citation {
     display: block;
     inline-size: 100%;
+    order: 1;
 
     @media (width > 600px) {
         inline-size: 80%;
+        order: 2;
     }
 }
 
@@ -218,12 +220,14 @@ div.hero {
     font-weight: 400;
     color: var(--neutral-grey);
     text-transform: uppercase;
+    order: 2;
 
     @media (width > 600px) {
         writing-mode: vertical-rl;
         transform: rotate(180deg);
         transform-origin: center;
         font-size: 1.25rem; /* 20px */
+        order: 1;
     }
 }
 
