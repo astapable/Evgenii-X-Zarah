@@ -377,4 +377,17 @@ a:hover {
     }
 }
 
+/* ACCORDION STYLING */
 
+.accordian li {
+    border-top: 2px solid var(--neutral-grey);
+}
+
+.accordian li:last-child {
+    border-bottom: 2px solid var(--neutral-grey);
+}
+
+summary {
+    cursor: pointer;
+    padding-block: 1rem;
+}
