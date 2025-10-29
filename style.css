@@ -389,5 +389,61 @@ a:hover {
 
 summary {
     cursor: pointer;
-    padding-block: 1rem;
+    position: relative;
+}
+
+summary::after {
+    content: '+';
+    position: absolute;
+    font-size: 2rem;
+    transition: transform 0.3s ease;
+}
+
+details[open] summary::after {
+    content: '−';
+    position: absolute;
+}
+
+details {
+    padding-block: 2.5rem;
+}
+
+details article {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.5s ease;
+}
+
+details[open] article {
+    opacity: 1;
+    max-height: 10000px;
+}
+
+/* FOOTER */
+.footer {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    h3{
+    padding-top: 20px;
+    }
+    p{ 
+    font-size: .75rem;
+    margin-right: 20px;
+}
+
+
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 50%;
+    flex: 1;
+}
 }
