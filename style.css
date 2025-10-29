@@ -389,19 +389,19 @@ a:hover {
 
 summary {
     cursor: pointer;
-    position: relative;
+    position: flex;
 }
 
 summary::after {
     content: '+';
     position: absolute;
-    font-size: 2rem;
+    inset-inline-end: 0;;
+    font-size: 5rem;
     transition: transform 0.3s ease;
 }
 
 details[open] summary::after {
     content: '−';
-    position: absolute;
 }
 
 details {
@@ -419,6 +419,8 @@ details[open] article {
     opacity: 1;
     max-height: 10000px;
 }
+
+
 
 /* FOOTER */
 .footer {
