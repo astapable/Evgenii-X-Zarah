@@ -767,7 +767,7 @@ a.button:link {
     text-decoration: none;
 }
 
-/* ACCORDION STYLING */
+                                                                                            /* ACCORDION STYLING */
 
 ul {
     display: flex;
@@ -848,17 +848,19 @@ summary { /* UPDATED */
 
 summary::after {
     content: '+';
+    display: flex;
     position: absolute;
+    text-align: center;
+    padding-right: 2rem;
     inset-inline-end: 0;
-    top: 25%;
-    transform: translate(-100%);
-    font-size: 2rem;
-    transition: transform 0.3s ease;
+    inset-block-start: 50%;
+    transform: translateY(-50%);
+    transition: transform 0.3s ease; 
 }
 
 details[open] summary::after {
     content: '−';
-    position: absolute;
+    /* position: absolute; */
 }
 
 details { 
@@ -892,40 +894,58 @@ details[open] article {
         padding-block-start: 4rem;
         padding-block-end: 2rem;
     }
-
-    @media (width > 900px) {
-        padding-block-start: 7rem;
-        padding-block-end: 3.5rem;
-    }
 }
-
-/* FOOTER */
+                                                                                      /* FOOTER */
 .footer {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    h3{
+    padding: 1rem;
+    h3 {
     padding-top: 20px;
+    text-align: left;
     }
-    p{ 
+    p { 
     font-size: .75rem;
-    margin-right: 20px;
+    margin-right: 1.5rem;
+    }
 }
 
 .row {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-direction: column;
     width: 100%;
 }
 
 .column {
     display: flex;
     flex-direction: column;
-    flex-basis: 50%;
+    flex-basis: 100%;
     flex: 1;
 }
 
-    @media {
-        
+@media (width > 600px) {
+    .row {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 2rem;
     }
+
+    .column {
+        flex: 45%;
+    }
+
 }
+                                                                                /* PRINT MEDIA QUERY */
+/* @media print {
+    :root {
+    --background: initial; /* Resets this.
+
+    font-size: 18pt; /* Absolute units! */
+    }
+
+    /* section {
+    /* border: 4pt solid black; */
+    /* font-family: serif;
+    padding: 0.5in;
+    }
+    details {
+        display: block;
+    }  */ 
