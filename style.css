@@ -59,6 +59,78 @@
 }
 
 /* WRAPPER TYPES */
+header {
+    width: 100%;
+    font-size: 2.125rem;
+    position: fixed;
+    z-index: 10;
+    padding-block: 1rem;
+    padding-inline: 1rem;
+
+    @media (width > 600px) {
+        padding-block: 1.2rem;
+        padding-inline: 1.2rem;
+    }
+
+    @media (width > 900px) {
+        padding-block: 1.5rem;
+        padding-inline: 1.5rem;
+    }
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.menu { /* UPDATED */
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+
+
+    gap: 1rem;
+
+    @media (width > 600px) {
+        gap: 1.5rem;
+    }
+
+    @media (width > 900px) {
+        gap: 2rem;
+    }
+}
+
+.logo { 
+    color: var(--charcoal);
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 130%; 
+    letter-spacing: 0rem;
+    text-transform: uppercase;
+
+    @media (width > 600px) {
+        font-size: 1.5rem;
+        line-height: 130%; 
+         letter-spacing: -0.025rem;
+    }
+
+    @media (width > 900px) {
+        font-size: 1.5rem;
+        line-height: 130%; 
+        letter-spacing: -0.025rem;
+    }
+}
+
+.button .logo:not(:first-child) {
+    font-weight: 400;
+}
+
+.group .square:nth-child(1) { background: var(--light-blue); }
+.group .square:nth-child(2) { background: var(--rich-pink); }
+
+
 body {
     font-size: 0.875rem;
     font-style: normal;
@@ -114,12 +186,9 @@ article {
     }
 }
 
-.hero > *:first-child { margin-top: 0; }
-.hero > *:last-child  { margin-bottom: 0; }
-
 .hero {
     overflow: hidden;
-    min-height: 100svh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -127,13 +196,6 @@ article {
     text-align: start;
     padding-inline: 0rem;
 
-    /* @media (width > 600px) {
-        padding-block: 1rem;
-	}
-
-    @media (width > 9000px) {
-        padding-block: 1.25rem;
-	} */
 }
 
 section {
@@ -167,38 +229,76 @@ section {
     }
 }
 
-.duo { align-items: flex-start; } /* UPDATED */
+
+.duo {
+    align-items: flex-start;
+    margin-block: 0.35rem;
+
+
+    @media (width > 600px) {
+        margin-block: 1rem;
+    }
+
+    @media (width > 900px) {
+        margin-block: 1.8rem;
+    }
+} 
+
 
 .duo-intro { /* UPDATED */
     align-items: flex-start;
+    margin-block: 0.35rem;
+
 
     @media (width > 600px) {
         align-items: flex-end; 
+        margin-block: 1rem;
     }
 
     @media (width > 900px) {
         align-items: flex-end; 
+        margin-block: 1.8rem;
     }
 } 
 
-.duo, /* UPDATED */
-.duo-intro {
+.duo-nav {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     gap: 1rem;
-    margin-block: 0.35rem;
+    
     width: 100%;
 
     @media (width > 600px) {
         flex-direction: row;
         justify-content: space-between;
-        margin-block: 1rem;
+        
     }
 
     @media (width > 900px) {
         flex-direction: row;
         justify-content: space-between;
-        margin-block: 1.8rem;
+        
+    }
+}
+
+.duo,
+.duo-intro {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    
+    width: 100%;
+
+    @media (width > 600px) {
+        flex-direction: row;
+        justify-content: space-between;
+        
+    }
+
+    @media (width > 900px) {
+        flex-direction: row;
+        justify-content: space-between;
+        
     }
 }
 
@@ -661,6 +761,10 @@ a:hover {
         text-underline-offset: -1.4rem;
         text-decoration-skip-ink: none;
     }
+}
+
+a.button:link {
+    text-decoration: none;
 }
 
 /* ACCORDION STYLING */
