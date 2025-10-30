@@ -366,7 +366,7 @@ section {
 /* CONTENT TYPES */
 h1 {
     overflow: visible;
-    height: 60%;
+    height: 30rem;
     display: flex;
     flex-direction: column;
     height: 20rem;
@@ -379,6 +379,7 @@ h1 {
     letter-spacing: -0.15rem;
 
     @media (width > 600px) {
+        height: 30rem;
         font-size: 9.5rem;
         line-height: 2.75rem;
         margin-block: 2rem;
@@ -387,6 +388,7 @@ h1 {
     }
 
     @media (width > 900px) {
+        height: 10rem;
         font-size: 12rem;
         line-height: 3.5rem;
         margin-block: 2.25rem;
