@@ -56,6 +56,18 @@
     --green: #18AD47; 
     --red: #FF0000;
     --orange: #FF8800;
+
+    @media print {
+        /* neutral base */
+        --off-white: #2d2d2d; 
+        --charcoal: #2d2d2d;
+        --neutral-grey: #898989;
+
+        /* main accent colors */
+        --light-blue: #C9C9C9; 
+        --rich-pink: #DEDEDE;
+        --sun-yellow: #DADADA;
+    }
 }
 
 /* WRAPPER TYPES */
@@ -904,14 +916,14 @@ details {
 
 details article {
     opacity: 0%;
-    max-height: 0rem;
+    /* max-height: 0rem; */
     overflow: hidden;
     transition: all 0.5s ease;
 }
 
 details[open] article { 
     opacity: 1;
-    max-height: 625rem;
+    /* block-size: 625rem; */
     padding-block-start: 4rem;
     padding-block-end: 1.5rem;
 
@@ -979,3 +991,13 @@ details[open] article {
         display: block;
     }
 }  */ 
+
+@media print {
+	::details-content { content-visibility: visible; }
+}
+
+@media print {
+	:root {
+		--background: initial;
+	}
+}
