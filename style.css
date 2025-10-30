@@ -88,8 +88,6 @@ nav {
     display: flex;
     flex-direction: row;
     align-items: baseline;
-
-
     gap: 1rem;
 
     @media (width > 600px) {
@@ -188,7 +186,7 @@ article {
 
 .hero {
     overflow: hidden;
-    min-height: 100vh;
+    min-height: 98svh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -196,6 +194,17 @@ article {
     text-align: start;
     padding-inline: 0rem;
 
+     @media (width > 600px) {
+            min-height: 100svh
+        }
+
+    @media (width > 900px) {
+            min-height: 100svh
+        }
+
+    @media (width > 1200px) {
+            min-height: 100svh
+        }
 }
 
 section {
@@ -264,21 +273,9 @@ section {
 .duo-nav {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     gap: 1rem;
-    
     width: 100%;
-
-    @media (width > 600px) {
-        flex-direction: row;
-        justify-content: space-between;
-        
-    }
-
-    @media (width > 900px) {
-        flex-direction: row;
-        justify-content: space-between;
-        
-    }
 }
 
 .duo,
@@ -286,7 +283,6 @@ section {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    
     width: 100%;
 
     @media (width > 600px) {
@@ -332,13 +328,8 @@ section {
 .group .square:nth-child(4) { background: var(--charcoal); }
 
 .square { /* UPDATED */
-        width: 2rem;
-        height: 2rem;
-
-    @media (width > 900px) {
-        width: 2.5rem;
-        height: 2.5rem;
-    }
+    width: 1.5rem;
+    height: 1.5rem;
 }
 
 .sub-wrapper { /* UPDATED */
@@ -425,11 +416,13 @@ section {
     @media (width > 600px) {
         font-size: 0.875rem;
         order: 1;
+        padding-inline-end: 0.5rem;
     }
 
     @media (width > 900px) {
         font-size: 1.25rem;
         order: 1;
+        padding-inline-end: 0.75rem;
     }
 }
 
@@ -468,41 +461,41 @@ section {
 
 /* CONTENT TYPES */
 h1 {
+    height: 5rem;
     overflow: visible;
-    height: 30rem;
     display: flex;
     flex-direction: column;
-    height: 20rem;
     font-weight: 700;
-    font-size: 5.65rem;
-    line-height: 1.65rem;
+    font-size: 5rem;
+    line-height: 1.75rem;
     color: var(--charcoal);
-    margin-block: 1.8rem;
+    margin-block-start: 1.8rem;
     margin-inline-start: -0.5rem;
     letter-spacing: -0.15rem;
 
     @media (width > 600px) {
-        height: 30rem;
-        font-size: 9.5rem;
-        line-height: 2.75rem;
-        margin-block: 2rem;
+        height: 20rem;
+        font-size: 7.5rem;
+        line-height: 2rem;
+        margin-block-start: 1.5rem;
         margin-inline-start: -0.75rem;
         letter-spacing: -0.25rem;
     }
 
     @media (width > 900px) {
-        height: 10rem;
-        font-size: 12rem;
-        line-height: 3.5rem;
-        margin-block: 2.25rem;
+        height: 20rem;
+        font-size: 9rem;
+        line-height: 2.75rem;
+        margin-block-start: 1.75rem;
+        margin-inline-start: -0.75rem;
         letter-spacing: -0.25rem;
-        margin-inline-start: -1rem;
     }
 
         @media (width > 1200px) {
-        font-size: 14rem;
-        line-height: 3.5rem;
-        margin-block: 3rem;
+        height: 20rem;
+        font-size: 11rem;
+        line-height: 3rem;
+        margin-block-start: 2.25rem;
         letter-spacing: -0.25rem;
         margin-inline-start: 20%;
     }
@@ -540,26 +533,6 @@ h2 {
     }
 }
 
-.title { 
-    font-size: 2rem;
-    font-weight: 400;
-    line-height: 115%;
-    letter-spacing: -0.023rem;
-    text-transform: uppercase;
-    color: var(--charcoal);
-
-    @media (width > 600px) {
-        font-size: 3rem;
-        line-height: 100%;
-        letter-spacing: -0.083rem;
-    }
-
-    @media (width > 900px) {
-        font-size: 4.25rem;
-        line-height: 100%;
-        letter-spacing: -0.083rem;
-    }
-}
 
 blockquote { 
     font-weight: 700;
@@ -623,7 +596,7 @@ blockquote::after {
     color: var(--rich-pink);
 
     @media (width > 600px) {
-        margin-block-start: 0.18rem;
+        margin-block-start: 0.24rem;
         color: var(--rich-pink);
     }
 
@@ -682,7 +655,7 @@ p {
 
     @media (width > 600px) {
         width: 85%;
-        font-size: 2rem;
+        font-size: 1.5rem;
         letter-spacing: -0.02rem;
         line-height: 115%; 
         margin-block-end: -0.3rem;
@@ -690,7 +663,7 @@ p {
 
     @media (width > 900px) {
         width: 80%;
-        font-size: 2.5rem;
+        font-size: 2rem;
         letter-spacing: -0.023rem;
         line-height: 115%;
         margin-block-end: -0.3rem;
@@ -698,7 +671,7 @@ p {
 
         @media (width > 1200px) {
         width: 60%;
-        font-size: 2.5rem;
+        font-size: 2rem;
         letter-spacing: -0.023rem;
         line-height: 115%;
         margin-block-end: -0.3rem;
@@ -767,7 +740,7 @@ a.button:link {
     text-decoration: none;
 }
 
-                                                                                            /* ACCORDION STYLING */
+/* ACCORDION STYLING */
 
 ul {
     display: flex;
@@ -834,6 +807,7 @@ summary { /* UPDATED */
     display: flex;
     flex-direction: row;
     gap: 1rem;
+    padding-inline-start: 0.5rem;
 
     @media (width > 600px) {
         gap: 1.25rem;
@@ -851,11 +825,23 @@ summary::after {
     display: flex;
     position: absolute;
     text-align: center;
-    padding-right: 2rem;
+    padding-inline-end: 1rem;
     inset-inline-end: 0;
-    inset-block-start: 50%;
+    inset-block-start: 45%;
     transform: translateY(-50%);
-    transition: transform 0.3s ease; 
+    transition: transform 0.3s ease;
+    font-size: 2.25rem;
+    color: var(--off-white);
+
+    @media (width > 600px) {
+        padding-inline-end: 1.2rem;
+        font-size: 3.25rem;
+    }
+
+    @media (width > 900px) {
+        padding-inline-end: 1.5rem;
+        font-size: 6rem;
+    }
 }
 
 details[open] summary::after {
@@ -895,7 +881,8 @@ details[open] article {
         padding-block-end: 2rem;
     }
 }
-                                                                                      /* FOOTER */
+
+/* FOOTER */
 .footer {
     padding: 1rem;
     h3 {
@@ -931,15 +918,13 @@ details[open] article {
     .column {
         flex: 45%;
     }
-
 }
-                                                                                /* PRINT MEDIA QUERY */
+/* PRINT MEDIA QUERY */
 /* @media print {
     :root {
     --background: initial; /* Resets this.
 
     font-size: 18pt; /* Absolute units! */
-    }
 
     /* section {
     /* border: 4pt solid black; */
@@ -948,4 +933,5 @@ details[open] article {
     }
     details {
         display: block;
-    }  */ 
+    }
+}  */ 
