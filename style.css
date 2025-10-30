@@ -105,7 +105,7 @@ article {
 
     @media (width > 600px) {
         gap: 3rem;
-        padding-inline: 1rem;
+        padding-inline: 1.2rem;
     }
 
     @media (width > 900px) {
@@ -229,8 +229,13 @@ section {
 .group .square:nth-child(4) { background: var(--charcoal); }
 
 .square { /* UPDATED */
-    width: 40px;
-    height: 40px;
+        width: 2rem;
+        height: 2rem;
+
+    @media (width > 900px) {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
 }
 
 .sub-wrapper { /* UPDATED */
@@ -239,13 +244,16 @@ section {
     flex-direction: row;
     align-items: flex-end;
     justify-content: space-between;
+    padding-inline: 1rem;
 
     @media (width > 600px) {
-        inline-size: 82%;
+        inline-size: 80.75%;
+        padding-inline: 1.2rem;
     }
 
     @media (width > 900px) {
-        inline-size: 80%;
+        inline-size: 80.75%;
+        padding-inline: 1.5rem;
     }
 }
 
