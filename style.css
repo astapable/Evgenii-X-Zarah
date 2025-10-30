@@ -514,6 +514,17 @@ h2 {
     }
 
     @media (width > 900px) {
+        font-size: 4.5rem;
+        line-height: 100%;
+        letter-spacing: -0.083rem;
+        color: var(--charcoal);
+        background-color: var(--off-white);
+        padding-inline-start: 1rem;
+        padding-inline-end: 1.2rem;
+        margin-inline-start: -1rem;
+    }
+
+    @media (width > 1200px) {
         font-size: 6rem;
         line-height: 100%;
         letter-spacing: -0.083rem;
@@ -839,20 +850,28 @@ summary::after {
 
     @media (width > 900px) {
         padding-inline-end: 1.5rem;
+        font-size: 4.5rem;
+    }
+
+    @media (width > 1200px) {
+        padding-inline-end: 1.5rem;
         font-size: 6rem;
+    }
+
+    @media print {  /* PRINT */ 
+        content: none;
     }
 }
 
 details[open] summary::after {
     content: '−';
-    /* position: absolute; */
+
 }
 
 details { 
     display: flex;
     flex-direction: column;
     gap: 0.4rem;
-
     @media (width > 600px) {
         padding-block-start: 1rem;
     }
@@ -864,15 +883,17 @@ details {
 
 details article {
     opacity: 0%;
-    /* block-size: 0rem; */
     opacity: 0%;
     overflow: hidden;
     transition: all 0.5s ease;
+
+    @media print { /* PRINT */ 
+        opacity: 100%;
+    }
 }
 
 details[open] article { 
     opacity: 1;
-    /* block-size: 625rem; */
     padding-block-start: 4rem;
     padding-block-end: 1.5rem;
 
@@ -942,11 +963,11 @@ details[open] article {
     }
 }  */ 
 
-@media print {
+@media print { /* PRINT */ 
 	::details-content { content-visibility: visible; }
 }
 
-@media print {
+@media print { /* PRINT */ 
 	:root {
 		--background: initial;
 	}
