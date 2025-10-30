@@ -241,7 +241,7 @@ section {
     justify-content: space-between;
 
     @media (width > 600px) {
-        inline-size: 80%;
+        inline-size: 82%;
     }
 
     @media (width > 900px) {
@@ -338,7 +338,7 @@ section {
     }
 }
 
-.citation {
+.citation { /* UPDATED */
     display: flex;
     inline-size: 100%;
     order: 1;
