@@ -864,9 +864,8 @@ details {
 
 details article {
     opacity: 0%;
-    /* max-height: 0rem; */
-    opacity: 0;
-    max-height: 0;
+    /* block-size: 0rem; */
+    opacity: 0%;
     overflow: hidden;
     transition: all 0.5s ease;
 }
@@ -886,6 +885,7 @@ details[open] article {
         padding-block-start: 8rem;
         padding-block-end: 3rem;
     }
+
 }
 
 /* FOOTER */
