@@ -927,3 +927,6 @@ details[open] article {
         display: block;
     }
 }  */ 
+  article#misc {
+  gap: 1rem;
+}
