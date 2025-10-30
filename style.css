@@ -114,6 +114,9 @@ article {
     }
 }
 
+.hero > *:first-child { margin-top: 0; }
+.hero > *:last-child  { margin-bottom: 0; }
+
 .hero {
     overflow: hidden;
     min-height: 100svh;
