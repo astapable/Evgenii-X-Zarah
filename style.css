@@ -924,4 +924,8 @@ details[open] article {
     flex-basis: 50%;
     flex: 1;
 }
+
+    @media {
+        
+    }
 }
