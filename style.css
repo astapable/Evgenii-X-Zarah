@@ -903,15 +903,15 @@ details {
 }
 
 details article {
-    opacity: 0;
-    max-height: 0;
+    opacity: 0%;
+    max-height: 0rem;
     overflow: hidden;
     transition: all 0.5s ease;
 }
 
 details[open] article { 
     opacity: 1;
-    max-height: 10000px;
+    max-height: 625rem;
     padding-block-start: 4rem;
     padding-block-end: 1.5rem;
 
