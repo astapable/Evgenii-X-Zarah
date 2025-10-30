@@ -874,7 +874,6 @@ details article {
 details[open] article { 
     opacity: 1;
     /* block-size: 625rem; */
-    max-height: 10000px;
     padding-block-start: 4rem;
     padding-block-end: 1.5rem;
 
