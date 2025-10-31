@@ -249,7 +249,7 @@ article {
 }
 
 
-.display span.h1 { /* UPDATED */
+.display span.h1 {
     display: block;
     mix-blend-mode: multiply;
 }
@@ -302,7 +302,6 @@ section {
         padding-inline-start: 20%;
     }
 }
-
 
 .duo {
     align-items: flex-start;
@@ -362,7 +361,7 @@ section {
     }
 }
 
-.group { /* UPDATED */
+.group {
     display: flex;
     flex-direction: row;
 
@@ -380,12 +379,12 @@ section {
 .group .square:nth-child(3) { background: var(--sun-yellow); }
 .group .square:nth-child(4) { background: var(--charcoal); }
 
-.square { /* UPDATED */
+.square {
     width: 1.5rem;
     height: 1.5rem;
 }
 
-.sub-wrapper { /* UPDATED */
+.sub-wrapper {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -407,24 +406,6 @@ section {
         padding-inline: 0rem;
     }
 }
-
-/* .float {
-    font-size: 5.25rem;
-    line-height: 90%;
-    letter-spacing: -0.25rem;
-    font-weight: 700;
-    color: #2d2d2d(18, 18, 18, 0.8) ;
-    opacity: 80%;
-    text-shadow: 0 24px 0 rgba(45, 45, 45, 0.50), 0 58px 0 rgba(45, 45, 45, 0.30), 0 82px 0 rgba(45, 45, 45, 0.10), 0 16px 0 rgba(45, 45, 45, 0.05);
-    mix-blend-mode: multiply;
-
-    @media (width > 900px) {
-        font-size: 9rem;
-        line-height: 90%;
-        letter-spacing: -0.55rem;
-        text-shadow: 0 44px 0 rgba(45, 45, 45, 0.50), 0 88px 0 rgba(45, 45, 45, 0.30), 0 126px 0 rgba(45, 45, 45, 0.10), 0 136px 0 rgba(45, 45, 45, 0.05);
-    }
-} */
 
 .vertical,
 .date {
@@ -992,7 +973,7 @@ summary::after {
         font-size: 6rem;
     }
 
-    @media print {  /* PRINT */ 
+    @media print {
         content: none;
     }
 }
@@ -1000,7 +981,7 @@ summary::after {
 details[open] summary::after {
     content: '−';
 
-    @media print {  /* PRINT */ 
+    @media print {
         content: none;
     }
 }
@@ -1031,7 +1012,7 @@ details article {
     overflow: hidden;
     transition: all 0.5s ease;
 
-    @media print {/* PRINT */ 
+    @media print {
         opacity: 100%;
     }
 }
@@ -1052,7 +1033,7 @@ details[open] article {
     }
 }
 
-@media print { /* PRINT */ 
+@media print {
 	::details-content { content-visibility: visible;}
 }
 
