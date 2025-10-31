@@ -51,28 +51,42 @@
     --light-blue: #009FF0; 
     --rich-pink: #D8007B;
     --sun-yellow: #EDE248;
-    
-    /* additional color */
-    --green: #18AD47; 
-    --red: #FF0000;
-    --orange: #FF8800;
 
-    @media print {
+    /* transparrent accent colors */
+    --transparrent-rich-pink: rgba(216, 0, 130, 0.8); 
+    --transparrent-sun-yellow: rgba(237, 226, 72, 0.8);
+    --transparrent-light-blue: rgba(0, 159, 240, 0.8); 
+}
+
+@media print {
+        :root {
         /* neutral base */
-        --off-white: #2d2d2d; 
+        --off-white: #FFFFFF; 
         --charcoal: #2d2d2d;
         --neutral-grey: #898989;
 
         /* main accent colors */
-        --light-blue: #C9C9C9; 
-        --rich-pink: #DEDEDE;
-        --sun-yellow: #DADADA;
-             
-        header { 
-        display: none!important;
-        } 
+        --light-blue: #ECECEC; 
+        --rich-pink: #DADADA;
+        --sun-yellow: #C5C5C5;
+
+        /* transparrent accent colors */
+        --transparrent-light-blue: #ECECEC;
+        --transparrent-rich-pink: #DADADA;
+        --transparrent-sun-yellow: #C5C5C5;
+
+        --background: initial;
+    }
 }
 
+@media print {
+    .hide {
+        display: none;
+    }
+}
+    /* @media print {
+        display: none!important;
+    } */
 /* <FOR HIDING THINGS FROM PRINT> https://www.geeksforgeeks.org/css/how-to-hide-an-element-when-printing-a-web-page-using-css/ */
 
 /* WRAPPER TYPES */
@@ -86,7 +100,7 @@ body {
     letter-spacing: 0rem;
     color: var(--neutral-grey);
     gap: 6rem;
-    background-color: #FAFAFA;
+    /* CHANGE!!!!!!! */ background-color: #FAFAFA;
 
     @media (width > 600px) {
 		font-size: 1.125rem;
@@ -99,6 +113,12 @@ body {
         letter-spacing: -0.018rem;
         gap: 10rem;
 	}
+
+    @media print {
+        font-size: 1.125rem;
+        letter-spacing: 0rem;
+        gap: 6rem;
+    }
 }
 
 header {
@@ -117,6 +137,12 @@ header {
     @media (width > 900px) {
         padding-block: 1.5rem;
         padding-inline: 1.5rem;
+    }
+
+    @media print {
+        position: static;
+        padding-block: 0rem;
+        padding-inline: 0rem;       
     }
 }
 
@@ -161,6 +187,10 @@ main {
     @media (width > 900px) {
         gap: 10rem;
     }
+
+    @media print {
+        gap: 4rem;
+    }
 }
 
 article {
@@ -180,6 +210,11 @@ article {
         gap: 5rem;
         padding-inline: 1.5rem;
     }
+
+    @media print {
+        padding-inline: 0rem;
+        gap: 2rem;
+    }
 }
 
 .hero {
@@ -193,17 +228,49 @@ article {
     padding-inline: 0rem;
 
      @media (width > 600px) {
-            min-height: 100svh
+            min-height: 100svh;
         }
 
     @media (width > 900px) {
-            min-height: 100svh
+            min-height: 100svh;
         }
 
     @media (width > 1200px) {
-            min-height: 100svh
+            min-height: 100svh;
         }
+
+    @media print {
+            min-height: auto;
+            gap: 22.5rem;
+        }  
 }
+
+.display {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    inline-size: 100%;
+}
+
+
+.display span.h1 { /* UPDATED */
+    display: block;
+    mix-blend-mode: multiply;
+}
+
+.display span.h1:nth-child(1),
+.display span.h1:nth-child(5),
+.display span.h1:nth-child(9) { color: var(--charcoal); }
+
+.display span.h1:nth-child(2),
+.display span.h1:nth-child(8) { color: var(--transparrent-rich-pink); }
+
+.display span.h1:nth-child(3),
+.display span.h1:nth-child(6) { color: var(--transparrent-sun-yellow); }
+
+.display span.h1:nth-child(4),
+.display span.h1:nth-child(7) { color: var(--transparrent-light-blue); }
+
 
 section {
     display: flex;
@@ -219,6 +286,10 @@ section {
     @media (width > 900px) {
         gap: 5rem;
         padding-inline: 20%;
+    }
+
+    @media print {
+        gap: 2rem;
     }
 }
 
@@ -295,17 +366,6 @@ section {
     }
 }
 
-.display {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    inline-size: 100%;
-
-    @media (width > 900px) {
-        inline-size: 100%;
-    }
-}
-
 .group { /* UPDATED */
     display: flex;
     flex-direction: row;
@@ -346,25 +406,11 @@ section {
         inline-size: 80.75%;
         padding-inline: 1.5rem;
     }
+
+    @media print {
+        padding-inline: 0rem;
+    }
 }
-
-.display span.h1 { /* UPDATED */
-    display: block;
-    mix-blend-mode: multiply;
-}
-
-.display span.h1:nth-child(1),
-.display span.h1:nth-child(5),
-.display span.h1:nth-child(9) { color: var(--charcoal); }
-
-.display span.h1:nth-child(2),
-.display span.h1:nth-child(8) { color: rgba(216, 0, 130, 0.8); }
-
-.display span.h1:nth-child(3),
-.display span.h1:nth-child(6) { color: rgba(237, 226, 72, 0.8); }
-
-.display span.h1:nth-child(4),
-.display span.h1:nth-child(7) { color: rgba(0, 159, 240, 0.8); }
 
 /* .float {
     font-size: 5.25rem;
@@ -471,7 +517,7 @@ h1 {
     letter-spacing: -0.15rem;
 
     @media (width > 600px) {
-        height: 20rem;
+        height: 10rem;
         font-size: 7.5rem;
         line-height: 2rem;
         margin-block-start: 1.5rem;
@@ -488,13 +534,20 @@ h1 {
         letter-spacing: -0.25rem;
     }
 
-        @media (width > 1200px) {
+    @media (width > 1200px) {
         height: 20rem;
         font-size: 11rem;
         line-height: 3rem;
         margin-block-start: 2.25rem;
         letter-spacing: -0.25rem;
         margin-inline-start: 20%;
+    }
+
+    @media print {
+        margin-block-start: 1.65rem;
+        letter-spacing: 0rem;
+        margin-inline-start: 0%;
+        font-size: 7.5rem;
     }
 }
 
@@ -562,6 +615,12 @@ blockquote {
     @media (width > 900px) {
         font-size: 4.6rem;
         line-height: 100%;
+        letter-spacing: -0.083rem;
+    }
+
+    @media print {
+        font-size: 2.25rem;
+        line-height: 105%;
         letter-spacing: -0.083rem;
     }
 }
@@ -651,6 +710,12 @@ p {
 		font-size: 1.5rem;
         letter-spacing: -0.018rem;
 	}
+
+    @media print {
+        font-size: 1rem;
+        letter-spacing: 0rem;
+        line-height: 140%; 
+    }
 }
 
 .subtitle { 
@@ -680,13 +745,17 @@ p {
         margin-block-end: -0.3rem;
 	}
 
-        @media (width > 1200px) {
+    @media (width > 1200px) {
         width: 60%;
         font-size: 2rem;
         letter-spacing: -0.023rem;
         line-height: 115%;
         margin-block-end: -0.3rem;
 	}
+
+    @media print {
+        width: 60%;
+    }
 }
 
 .intro { 
@@ -710,6 +779,15 @@ p {
         line-height: 120%; 
         letter-spacing: -0.065rem;
     }
+
+    @media print {
+        color: var(--neutral-grey);
+        font-size: 1.25rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 120%; 
+        letter-spacing: 0rem;
+        }
 }
 
 .italics {
@@ -822,16 +900,14 @@ ul {
     .accordian li:nth-child(6) h2 { color: var(--sun-yellow); }
 }
 
-summary { /* UPDATED */
+summary {
     cursor: pointer;
     position: relative;
     display: flex;
     flex-direction: row;
-    gap: 1rem;
     padding-inline-start: 0.5rem;
 
     @media (width > 600px) {
-        gap: 1.25rem;
         padding-inline-start: 18.5%;
         }
 
@@ -883,6 +959,7 @@ details {
     display: flex;
     flex-direction: column;
     gap: 0.4rem;
+
     @media (width > 600px) {
         padding-block-start: 1rem;
     }
@@ -892,8 +969,14 @@ details {
     }
 }
 
+@media print {
+    details > summary + article {
+        margin-top: 2rem;
+    }
+}
+
+
 details article {
-    opacity: 0%;
     opacity: 0%;
     overflow: hidden;
     transition: all 0.5s ease;
@@ -917,7 +1000,10 @@ details[open] article {
         padding-block-start: 8rem;
         padding-block-end: 3rem;
     }
-    
+}
+
+@media print { /* PRINT */ 
+	::details-content { content-visibility: visible;}
 }
 
 /* FOOTER */
@@ -936,12 +1022,15 @@ details[open] article {
 
 @media (width > 600px) {
     .footer {
-        flex-direction: row; 
+           flex-direction: row; 
+        }
     }
-}
+
 @media (width > 900px) {
     .footer {
         padding: 4rem;
         gap: 3rem;
     }
 }
+
+
