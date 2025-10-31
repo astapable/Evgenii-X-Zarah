@@ -818,6 +818,15 @@ a {
     }
 }
 
+@media print {
+    a {
+        font-weight: 600;
+        color: var(--charcoal);
+        text-decoration: none;
+    }
+}
+
+
 a:hover {
     color: var(--charcoal);
 }
@@ -867,6 +876,10 @@ ul {
     @media (width > 900px) {
         gap: 4rem;
         }
+
+    @media print {
+        gap: 4rem;
+    }
 }
 
 .accordian li:nth-child(1) summary, 
