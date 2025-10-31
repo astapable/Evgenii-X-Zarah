@@ -1,5 +1,5 @@
 # Project 2: Spread
-By Evgenii X Zarah
+By Evgenii Astapov X Zarah Yaqub
 ## About
 This website was created as part of Project 2 for Type & Interaction 
 
