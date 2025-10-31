@@ -96,7 +96,7 @@ body {
     letter-spacing: 0rem;
     color: var(--neutral-grey);
     gap: 6rem;
-    /* CHANGE!!!!!!! */ background-color: #FAFAFA;
+    background-color: var(--off-white);
 
     @media (width > 600px) {
 		font-size: 1.125rem;
@@ -164,6 +164,12 @@ nav {
     }
 
     @media (width > 900px) {
+        font-size: 1rem;
+        line-height: 130%; 
+        letter-spacing: 0rem;
+    }
+
+    @media (width > 1200px) {
         font-size: 1.5rem;
         line-height: 130%; 
         letter-spacing: -0.025rem;
@@ -185,7 +191,7 @@ main {
     }
 
     @media print {
-        gap: 4rem;
+        gap: 4.5rem;
     }
 }
 
@@ -209,7 +215,7 @@ article {
 
     @media print {
         padding-inline: 0rem;
-        gap: 2rem;
+        gap: 3rem;
     }
 }
 
@@ -237,7 +243,7 @@ article {
 
     @media print {
             min-height: auto;
-            gap: 22.5rem;
+            gap: 24.5rem;
         }  
 }
 
@@ -489,26 +495,27 @@ h1 {
     font-size: 5rem;
     line-height: 1.75rem;
     color: var(--charcoal);
-    margin-block-start: 1.8rem;
+    margin-block-start: 5.5rem;
     margin-inline-start: -0.5rem;
     letter-spacing: -0.15rem;
 
     @media (width > 600px) {
-        height: 10rem;
+        height: 8rem;
         font-size: 7.5rem;
         line-height: 2rem;
-        margin-block-start: 1.5rem;
+        margin-block-start: 8rem;
         margin-inline-start: -0.75rem;
         letter-spacing: -0.25rem;
     }
 
     @media (width > 900px) {
-        height: 20rem;
+        height: 15rem;
         font-size: 9rem;
         line-height: 2.75rem;
         margin-block-start: 1.75rem;
         margin-inline-start: -0.75rem;
         letter-spacing: -0.25rem;
+        margin-inline-start: 20%;
     }
 
     @media (width > 1200px) {
@@ -578,10 +585,6 @@ h2 {
     }
 }
 
-.ftr {
-    color: var(--charcoal);
-}
-
 blockquote { 
     font-weight: 700;
     font-size: 1.575rem;
@@ -603,8 +606,8 @@ blockquote {
     }
 
     @media print {
-        font-size: 2.25rem;
-        line-height: 105%;
+        font-size: 2.15rem;
+        line-height: 110%;
         letter-spacing: -0.083rem;
         color: var(--sun-yellow);
     }
@@ -703,7 +706,7 @@ p {
     @media print {
         font-size: 1rem;
         letter-spacing: 0rem;
-        line-height: 140%; 
+        line-height: 150%; 
     }
 }
 
@@ -771,7 +774,7 @@ p {
 
     @media print {
         color: var(--neutral-grey);
-        font-size: 1.25rem;
+        font-size: 1.55rem;
         font-style: normal;
         font-weight: 400;
         line-height: 120%; 
@@ -1044,22 +1047,81 @@ details[open] article {
     flex-direction: column;
     gap: 1.5rem;
     padding: 2rem;
-    margin-block-end: .75rem;
+    margin-block-end: 1rem;
+
+    @media (width > 600px) {
+        flex-direction: row; 
+    }
+
+@media (width > 900px) {
+        padding: 4rem;
+        gap: 3rem;
+    }
+    
+@media print {
+        display: none;
+    }
 }
 
 .footer .columns {
     flex: 1;
 }
 
-@media (width > 600px) {
-    .footer {
-           flex-direction: row; 
-        }
-    }
+.misc-wap{
+    background: var(--off-white)
+}
 
-@media (width > 900px) {
-    .footer {
-        padding: 4rem;
-        gap: 3rem;
+.color {
+    display: flex;
+    align-items: center;
+    background: var(--charcoal);
+    color: var(--off-white);
+    width: 100vw;
+    margin-inline: calc(50% - 50vw);
+    padding-inline-start: 0.5rem;
+
+    @media (width > 600px) {
+        padding-inline-start: 18.5%;
+        }
+
+    @media (width > 900px) {
+        padding-inline-start: 21%;
+        }
+
+    @media print {
+        color: var(--charcoal);
+        display: none;
     }
 }
+
+.ftr {
+    overflow: hidden;
+    min-height: 98svh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    text-align: start;
+    padding-inline: 0rem;
+    margin-block-end: 1rem;
+
+     @media (width > 600px) {
+            min-height: 100svh;
+        }
+
+    @media (width > 900px) {
+            min-height: 100svh;
+        }
+
+    @media (width > 1200px) {
+            min-height: 100svh;
+        }
+
+    @media print {
+            min-height: auto;
+        }  
+}
+
+
+
+
