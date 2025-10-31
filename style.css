@@ -84,10 +84,6 @@
         display: none;
     }
 }
-    /* @media print {
-        display: none!important;
-    } */
-/* <FOR HIDING THINGS FROM PRINT> https://www.geeksforgeeks.org/css/how-to-hide-an-element-when-printing-a-web-page-using-css/ */
 
 /* WRAPPER TYPES */
 body {
