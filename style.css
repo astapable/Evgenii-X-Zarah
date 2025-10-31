@@ -755,6 +755,12 @@ a.button:link {
 }
 
 /* ACCORDION STYLING */
+<REFS> 
+    /* https://www.youtube.com/watch?v=fSkhTd4rpDo&t=392s
+    https://www.builder.io/blog/animated-css-accordions
+    https://developer.mozilla.org/en-US/docs/Web/CSS/::details-content
+<FOR THE + & -> 
+    https://developer.mozilla.org/en-US/docs/Web/CSS/::selection */
 
 ul {
     display: flex;
@@ -891,11 +897,11 @@ details article {
     overflow: hidden;
     transition: all 0.5s ease;
 
-    @media print {                          /* PRINT */ 
+    @media print {/* PRINT */ 
         opacity: 100%;
     }
-}
-
+/* }
+<REF>: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_media_queries/Printing */
 details[open] article { 
     opacity: 1;
     padding-block-start: 4rem;
