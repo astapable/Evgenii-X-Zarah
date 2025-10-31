@@ -67,7 +67,11 @@
         --light-blue: #C9C9C9; 
         --rich-pink: #DEDEDE;
         --sun-yellow: #DADADA;
-    }
+             
+        header { 
+        display: none!important;
+        } 
+/* <FOR HIDING THINGS FROM PRINT> https://www.geeksforgeeks.org/css/how-to-hide-an-element-when-printing-a-web-page-using-css/ */
 }
 
 /* WRAPPER TYPES */
@@ -887,7 +891,7 @@ details article {
     overflow: hidden;
     transition: all 0.5s ease;
 
-    @media print { /* PRINT */ 
+    @media print {                          /* PRINT */ 
         opacity: 100%;
     }
 }
@@ -906,68 +910,30 @@ details[open] article {
         padding-block-start: 8rem;
         padding-block-end: 3rem;
     }
+    
 }
 
 /* FOOTER */
+/* <FLEX COLUMNS> https://www.youtube.com/watch?v=WkVOt53wK6k */
 .footer {
-    margin-block-end: 0.75rem;
-
-    @media (width > 600px) {
-        margin-block-end: 0rem;
-    }
-
-    @media (width > 900px) {
-        margin-block-end: 0rem;
-    }
-}
-
-.row {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    gap: 1.5rem;
+    padding: 2rem;
+    margin-block-end: .75rem;
 }
 
-.column {
-    display: flex;
-    flex-direction: column;
-    flex-basis: 100%;
+.footer .columns {
     flex: 1;
 }
 
 @media (width > 600px) {
-    .row {
-        flex-direction: row;
-        flex-wrap: wrap;
-        gap: 2rem;
+    .footer {
+        flex-direction: row; 
     }
-
-    .column {
-        flex: 45%;
+@media (width > 900px) {
+    .footer {
+        padding: 4rem;
+        gap: 3rem;
     }
-}
-/* PRINT MEDIA QUERY */
-/* @media print {
-    :root {
-    --background: initial; /* Resets this.
-
-    font-size: 18pt; /* Absolute units! */
-
-    /* section {
-    /* border: 4pt solid black; */
-    /* font-family: serif;
-    padding: 0.5in;
-    }
-    details {
-        display: block;
-    }
-}  */ 
-
-@media print { /* PRINT */ 
-	::details-content { content-visibility: visible; }
-}
-
-@media print { /* PRINT */ 
-	:root {
-		--background: initial;
-	}
 }
