@@ -592,6 +592,13 @@ h2 {
         padding-inline-end: 1.2rem;
         margin-inline-start: -1rem;
     }
+
+    @media print {
+        color: var(--off-white);
+        font-size: 3.25rem;
+        line-height: 100%;
+        letter-spacing: -0.083rem;
+    }
 }
 
 .ftr {
@@ -622,6 +629,7 @@ blockquote {
         font-size: 2.25rem;
         line-height: 105%;
         letter-spacing: -0.083rem;
+        color: var(--sun-yellow);
     }
 }
 
@@ -659,6 +667,10 @@ blockquote::after {
 .lvl-01, 
 .lvl-02 {
     position: absolute;
+
+    @media print {
+        display: none;
+    }
 }
 
 .lvl-01 { 
@@ -870,6 +882,17 @@ ul {
 .accordian li:nth-child(3) summary,
 .accordian li:nth-child(6) summary { background: var(--sun-yellow); }
 
+@media print {
+    .accordian li:nth-child(1) summary, 
+    .accordian li:nth-child(4) summary { background: var(--transparrent-sun-yellow); }
+
+    .accordian li:nth-child(2) summary,
+    .accordian li:nth-child(5) summary { background: var(--transparrent-sun-yellow); }
+
+    .accordian li:nth-child(3) summary,
+    .accordian li:nth-child(6) summary { background: var(--transparrent-sun-yellow); }
+}
+
 @media (width > 600px) {
     .accordian li:nth-child(1) h2,
     .accordian li:nth-child(4) h2 { color: var(--light-blue); }
@@ -878,6 +901,11 @@ ul {
 @media (width > 900px) {
     .accordian li:nth-child(1) h2,
     .accordian li:nth-child(4) h2 { color: var(--light-blue); }
+}
+
+@media print {
+    .accordian li:nth-child(1) h2,
+    .accordian li:nth-child(4) h2 { color: var(--transparrent-sun-yellow); }
 }
 
 @media (width > 600px) {
@@ -890,6 +918,11 @@ ul {
     .accordian li:nth-child(5) h2 { color: var(--rich-pink); }
 }
 
+@media print {
+    .accordian li:nth-child(2) h2,
+    .accordian li:nth-child(5) h2 { color: var(--transparrent-sun-yellow); }
+}
+
 @media (width > 600px) {
     .accordian li:nth-child(3) h2,
     .accordian li:nth-child(6) h2 { color: var(--sun-yellow); }
@@ -898,6 +931,11 @@ ul {
 @media (width > 900px) {
     .accordian li:nth-child(3) h2,
     .accordian li:nth-child(6) h2 { color: var(--sun-yellow); }
+}
+
+@media print {
+    .accordian li:nth-child(3) h2,
+    .accordian li:nth-child(6) h2 { color: var(--transparrent-sun-yellow); }
 }
 
 summary {
@@ -953,6 +991,9 @@ summary::after {
 details[open] summary::after {
     content: '−';
 
+    @media print {  /* PRINT */ 
+        content: none;
+    }
 }
 
 details { 
@@ -971,7 +1012,7 @@ details {
 
 @media print {
     details > summary + article {
-        margin-top: 2rem;
+        margin-top: 3.5rem;
     }
 }
 
