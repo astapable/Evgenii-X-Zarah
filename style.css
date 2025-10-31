@@ -71,8 +71,9 @@
         header { 
         display: none!important;
         } 
-/* <FOR HIDING THINGS FROM PRINT> https://www.geeksforgeeks.org/css/how-to-hide-an-element-when-printing-a-web-page-using-css/ */
 }
+
+/* <FOR HIDING THINGS FROM PRINT> https://www.geeksforgeeks.org/css/how-to-hide-an-element-when-printing-a-web-page-using-css/ */
 
 /* WRAPPER TYPES */
 body {
@@ -755,7 +756,7 @@ a.button:link {
 }
 
 /* ACCORDION STYLING */
-<REFS> 
+/* <REFS>  */
     /* https://www.youtube.com/watch?v=fSkhTd4rpDo&t=392s
     https://www.builder.io/blog/animated-css-accordions
     https://developer.mozilla.org/en-US/docs/Web/CSS/::details-content
@@ -900,8 +901,8 @@ details article {
     @media print {/* PRINT */ 
         opacity: 100%;
     }
-/* }
-<REF>: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_media_queries/Printing */
+}
+/* <REF>: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_media_queries/Printing */
 details[open] article { 
     opacity: 1;
     padding-block-start: 4rem;
@@ -937,6 +938,7 @@ details[open] article {
     .footer {
         flex-direction: row; 
     }
+}
 @media (width > 900px) {
     .footer {
         padding: 4rem;
